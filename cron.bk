@@ -1,0 +1,37 @@
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[24;1H"/tmp/crontab.UYPuNQ/crontab" 27L, 985C[1;1H[34m# Edit this file to introduce tasks to be run by cron.
+# 
+# Each task to run has to be defined through a single line
+# indicating with different fields when the task will be run
+# and what command to run for the task
+# 
+# To define the time you can provide concrete values for
+# minute (m), hour (h), day of month (dom), month (mon),
+# and day of week (dow) or use '*' in these fields (for 'any').
+# 
+# Notice that tasks will be started based on the cron's system
+# daemon's notion of time and timezones.
+# 
+# Output of the crontab jobs (including errors) is sent through
+# email to the user the crontab file belongs to (unless redirected).
+# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command[m[24;63H1,1[11CTop[1;1H[?25h[?25l[24;53Hq[1;1H[?25h[?25l[24;54H:[1;1H[24;53H  [1;1H[24;1H[K[24;1H:[?2004h[15;1H[7mcrontab.UYPuNQ/crontab                                        1,1            Top[m[16;1H[94m:[mD
+[94m:[m[38;5;130mwq[m![17;5H[K[18;1H[94m:[m[38;5;130mq[m[18;3H[K[19;1H[94m:[m[38;5;130mq[m![19;4H[K[20;1H[94m:[m[38;5;130mw[m
+[94m:[m[38;5;130mwq[m[21;4H[K[22;1H[94m:[m[22;2H[K[23;1H[1m[7m[Command Line]                                                24,0-1         Bot[22;2H[?25h[?25l[m[24;70H:q[22;2H[?25h[?25l[24;72H:[22;2H[24;70H   [22;2H[24;1H[K[24;1H:[?2004h[?25h[?25l[24;1H[K[22;2H[?25h[?25l
+
+:[?25h[?25l[24;1H[K[15;1H[34m# email to the user the crontab file belongs to (unless redirected).[m[15;69H[K[16;1H[34m# 
+# For example, you can run a backup of all your user accounts
+# at 5 a.m every week with:
+# 0 5 * * 1 tar -zcf /var/backups/home.tgz /home/
+# 
+# For more information see the manual pages of crontab(5) and cron(8)
+# 
+# m h  dom mon dow   command[m[23;29H[K[24;63H1,1[11CTop[1;1H[?25h[?25l[24;1HType  :qa!  and press <E...all changes and exit Vim[24;63H[K[24;63H1,1[11CTop[1;1H[?25h[?25l[24;63H[K[24;63H1,1[11CTop[1;1H[?25h[?25l[24;63H[K[24;63H1,1[11CTop[1;1H[?25h[?25l[24;63H[K[24;63H1,1[11CTop[1;1H[?25h[?25l[24;63H[K[24;63H1,1[11CTop[1;1H[?25h[?25l[24;63H[K[24;63H1,1[11CTop[1;1H[?25h[?25l[24;63H[K[24;63H1,1[11CTop[1;1H[?25h[?25l[24;53He[1;1H[24;53H [1;6H[24;65H6[1;6H[?25h[?25l[24;53Hx[1;6H[24;53H [1;6H[24;53Hdl[1;6H[24;53H  [1;6H[34m this file to introduce tasks to be run by cron.[m[1;54H[K[1;6H[?25h[?25l[24;53Hi[1;6H[24;53H [1;6H[24;1H[1m-- INSERT --[m[24;13H[K[24;63H1,6[11CTop[1;6H[?25h[24;1H[?2004l[?2004l[?1l>[?1049l[23;0;0tVim: Error reading input, exiting...
+Vim: preserving files...
+Vim: Finished.
+[24;1H[?2004h[?25h[?2004l[23;2t[23;1t[22;2t[22;1t[23;2t[23;1t[J
