@@ -7,7 +7,7 @@ const getVideos = require("./middleware/getVideos");
 dotenv.config({ path: "./config/config.env" });
 
 const app = express();
-// test
+
 // Middleware
 app.use(express.json());
 
@@ -24,11 +24,6 @@ mongoose
 	})
 	.then(() => console.log("MongoDB Connected...".green.bold))
 	.catch((err) => console.log(err));
-
-//Use Routes
-app.get("/", (req, res) => {
-	res.send("test");
-});
 
 app.use("/api/catalog", require("./routes/api/catalog.js"));
 
