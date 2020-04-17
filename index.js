@@ -24,7 +24,7 @@ mongoose
 	})
 	.then(() => console.log("MongoDB Connected...".green.bold))
 	.catch((err) => console.log(err));
-
+app.use("/api/episode", require("./routes/api/episode.js"));
 app.use("/api/catalog", require("./routes/api/catalog.js"));
 
 const PORT = process.env.PORT || 5000;
