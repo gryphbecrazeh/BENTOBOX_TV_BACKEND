@@ -30,22 +30,26 @@ router.post("/", async (req, res) => {
 		return res;
 	};
 
-	getValues(url).then((res) => {
-		res.forEach((item) => {
+	getValues(url).then((videos) => {
+		videos.forEach((item) => {
 			let { name, episode, link } = item;
 			if (!name || !episode || !link) {
 				return res.status(400).json({ msg: "Not all fields were available" });
 			}
 			let video = new Video({ ...item });
-			Video.findOne(item).then((res) => {
-				if (res === null) {
-					video.save().then((item) => {
-						console.log(item);
-					});
-				} else {
-					Video.findOneAndUpdate(item).then((res) => res);
-				}
-			});
+			Video.findOne(item)
+				.then((foundVideo) => {
+					if (foundVideo === null) {
+						video.save();
+					} else {
+						Video.findOneAndUpdate(foundVideo._id, item)
+							.then((updateRes) => console.log(updateRes))
+							.catch((err) => {
+								console.log(err);
+							});
+					}
+				})
+				.catch((err) => console.log(err));
 		});
 	});
 	res

@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "nodemon index.js",
 		"client": "cd frontEnd/bentobox-tv-app ; npm start",
-		"dev": "concurrently \"npm start\" npm run client\""
+		"dev": "concurrently \"npm start\" \"npm run client\""
 	},
 	"author": "",
 	"license": "ISC",
