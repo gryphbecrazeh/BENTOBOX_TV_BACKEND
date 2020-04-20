@@ -27,6 +27,15 @@ mongoose
 app.use("/api/episode", require("./routes/api/episode.js"));
 app.use("/api/catalog", require("./routes/api/catalog.js"));
 
+// Serve static assets if in production
+if (process.env.NODE_ENV === "production") {
+	// Set static folder
+	app.use(express.static("frontEnd/BENTOBOX_TV_FRONTEND/build"));
+	app.get("*", (req, res) => {
+		res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+	});
+}
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(
