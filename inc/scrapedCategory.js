@@ -15,7 +15,10 @@ class ScrapedCategory {
 			const VideoScraper = require("./videoScraper");
 			// Launch puppeteer
 			return await puppeteer
-				.launch({ headless: true })
+				.launch({
+					headless: true,
+					args: ["--no-sandbox", "--disable-setuid-sandbox"],
+				})
 				.then(async (browser) => {
 					const page = await browser.newPage();
 					await page.setViewport({ width: 1920, height: 1080 });
