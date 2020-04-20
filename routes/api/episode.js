@@ -10,16 +10,19 @@ router.get("/", (req, res) => {
 	let { episode } = req.query;
 	Video.findById(episode)
 		.then((ep) => {
+			console.log("found video");
 			// if (!ep.video) {
+			console.log("video doesn't have raw url");
 			let scraper = new VideoScraper();
 			scraper.getVideo(ep.link).then((link) => {
+				console.log("scraped video");
 				Video.findByIdAndUpdate(episode, { video: link }).catch((err) => {
 					res.status(400).json({ msg: "Unable to update file..." });
 				});
 				res.status(200).json({ ...ep, video: link });
 			});
 			// } else {
-			// res.status(200).json(ep);
+			// 	res.status(200).json(ep);
 			// }
 		})
 		.catch((err) => console.log(err));
