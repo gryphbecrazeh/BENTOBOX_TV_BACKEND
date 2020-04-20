@@ -1,7 +1,7 @@
 frontEnd/*
 package-lock.json
 node_modules
-config/
-config/*
-*.env
+#config/
+#config/*
+#*.env
 test-post.json
