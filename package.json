@@ -1,18 +1,17 @@
 {
-	"name": "anime-scraper",
+	"name": "bentobox-tv",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
 		"start": "nodemon index.js",
-		"client": "cd frontEnd/bentobox-tv-app ; npm start",
+		"client": "cd frontEnd/BENTOBOX_TV_FRONTEND ; npm start",
 		"dev": "concurrently \"npm start\" \"npm run client\"",
 		"a2-postbuild": "NPM_CONFIG_PRODUCTION=false cd frontEnd/BENTOBOX_TV_FRONTEND ; npm install  && npm run build "
 	},
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"bootstrap": "^4.4.1",
 		"colors": "^1.4.0",
 		"concurrently": "^5.1.0",
 		"dotenv": "^8.2.0",
