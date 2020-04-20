@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const colors = require("colors");
 const mongoose = require("mongoose");
 const getVideos = require("./middleware/getVideos");
+const path = require("path");
 
 dotenv.config({ path: "./config/config.env" });
 
