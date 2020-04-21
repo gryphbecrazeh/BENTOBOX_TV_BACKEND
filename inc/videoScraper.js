@@ -13,7 +13,8 @@ class VideoScraper {
 					const page = await browser.newPage();
 					page.on("response", (response) => {
 						let resUrl = response["_url"];
-						if (resUrl.match(/s.\.mp4\.sh\/\w+\//gim)) {
+						let status = response["_status"];
+						if (resUrl.match(/s.\.mp4\.sh\/\w+\//gim) && status == "206") {
 							videoUrl = resUrl;
 						}
 					});
