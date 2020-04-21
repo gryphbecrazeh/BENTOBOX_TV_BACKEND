@@ -18,7 +18,8 @@ router.get("/", (req, res) => {
 				console.log("scraped video");
 				Video.findByIdAndUpdate(episode, { video: link })
 					.then(() => {
-						console.log("updated");
+						console.log("update						console.log(status);
+d");
 					})
 					.catch((err) => {
 						console.log(err);
