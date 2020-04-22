@@ -7,7 +7,7 @@
 		"start": "nodemon index.js",
 		"client": "cd frontEnd/BENTOBOX_TV_FRONTEND ; npm start",
 		"dev": "concurrently \"npm start\" \"npm run client\"",
-		"a2-postbuild": "NPM_CONFIG_PRODUCTION=false cd frontEnd/BENTOBOX_TV_FRONTEND ; npm install  && npm run build ",
+		"a2-postbuild": "NPM_CONFIG_PRODUCTION=false cd frontEnd/BENTOBOX_TV_FRONTEND ; npm install  && npm run build",
 		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd frontEnd/BENTOBOX_TV_FRONTEND ; npm install  && npm run build"
 	},
 	"author": "",
