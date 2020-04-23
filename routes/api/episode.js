@@ -10,22 +10,22 @@ router.get("/", (req, res) => {
 	let { episode } = req.query;
 	Video.findById(episode)
 		.then((ep) => {
-			// if (!ep.video) {
-			let scraper = new VideoScraper();
-			scraper.getVideo(ep.link).then((link) => {
-				Video.findByIdAndUpdate(episode, { video: link })
-					.then(() => {
-						console.log("updated");
-					})
-					.catch((err) => {
-						console.log(err);
-						res.status(400).json({ msg: "Unable to update file..." });
-					});
-				res.status(200).json({ ...ep, video: link });
-			});
-			// } else {
-			// res.status(200).json(ep);
-			// }
+			if (!ep.video) {
+				let scraper = new VideoScraper();
+				scraper.getVideo(ep.link).then((link) => {
+					Video.findByIdAndUpdate(episode, { video: link })
+						.then(() => {
+							console.log("updated");
+						})
+						.catch((err) => {
+							console.log(err);
+							res.status(400).json({ msg: "Unable to update file..." });
+						});
+					res.status(200).json({ ...ep, video: link });
+				});
+			} else {
+				res.status(200).json(ep);
+			}
 		})
 		.catch((err) => console.log(err));
 });
