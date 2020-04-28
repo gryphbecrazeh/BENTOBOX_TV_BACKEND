@@ -3,13 +3,14 @@ class VideoScraper {
 		this.getVideo = async (url) => {
 			let videoUrl;
 			const puppeteer = require("puppeteer");
-
+			console.log("launching puppeteer");
 			return puppeteer
 				.launch({
 					headless: true,
 					args: ["--no-sandbox", "--disable-setuid-sandbox"],
 				})
 				.then(async (browser) => {
+					console.log("puppeteerlaunched");
 					const page = await browser.newPage();
 					page.on("response", (response) => {
 						if (videoUrl == null) {

@@ -18,6 +18,7 @@ let Episode = () => {
 	useEffect(() => {
 		if (!loaded) {
 			axios.get(`/api/episode/?episode=${episodeID}`).then((res) => {
+				console.log(res);
 				setEpisode(res.data);
 				setLoaded(true);
 			});

@@ -25,6 +25,14 @@ mongoose
 	})
 	.then(() => console.log("MongoDB Connected...".green.bold))
 	.catch((err) => console.log(err));
+
+//Allow cross origin
+app.use(function(req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 app.use("/api/episode", require("./routes/api/episode.js"));
 app.use("/api/catalog", require("./routes/api/catalog.js"));
 
