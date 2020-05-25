@@ -14,7 +14,7 @@ app.use(express.json());
 
 // DB CONFIG
 const DB = process.env.MONGO_URI;
-// test
+
 // Connect to Mongo
 mongoose
 	.connect(DB, {
@@ -27,14 +27,18 @@ mongoose
 	.catch((err) => console.log(err));
 
 //Allow cross origin
-app.use(function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
+app.use(function (req, res, next) {
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header(
+		"Access-Control-Allow-Headers",
+		"Origin, X-Requested-With, Content-Type, Accept"
+	);
+	next();
 });
 
 app.use("/api/episode", require("./routes/api/episode.js"));
 app.use("/api/catalog", require("./routes/api/catalog.js"));
+app.use("/api/users", require("./routes/api/users.js"));
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
