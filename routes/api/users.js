@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const User = require("../../models/User");
 const https = require("https");
+const bcrypt = require("bcrypt");
+
 // @route GET /api/catalog
 // @desc get ALL videos from database
 // @access PUBLIC
@@ -17,6 +19,8 @@ router.post("/", async (req, res) => {
 		res.status(400).json({ msg: "Missing Username, Email, or Password" });
 		return 0;
 	}
+	let newUser = new User(username, email, password);
+	console.log(newUser);
 	res.status(200).json({ msg: `${username}` });
 });
 
